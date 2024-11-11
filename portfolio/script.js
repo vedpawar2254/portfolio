@@ -1,4 +1,4 @@
-// script.js
+
 
 const lastNameElement = document.getElementById("last-name");
 const names = ["Pawar", "Gawar", "Bimar"];
@@ -9,5 +9,5 @@ function changeLastName() {
     lastNameElement.textContent = names[index];
 }
 
-// Change the last name every 2 seconds
+
 setInterval(changeLastName, 2000);
