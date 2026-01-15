@@ -1,0 +1,96 @@
+.easter-egg-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: white;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  z-index: 10001;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.easter-egg-message.fade-out {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+@keyframes rainbow-border {
+  0% { box-shadow: 0 0 20px 5px #ef4444; }
+  20% { box-shadow: 0 0 20px 5px #f59e0b; }
+  40% { box-shadow: 0 0 20px 5px #10b981; }
+  60% { box-shadow: 0 0 20px 5px #3b82f6; }
+  80% { box-shadow: 0 0 20px 5px #8b5cf6; }
+  100% { box-shadow: 0 0 20px 5px #ef4444; }
+}
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  z-index: 10000;
+  pointer-events: none;
+  animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+  0% {
+    top: -10px;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    transform: rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.sparkle {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, #fff, #ffd700);
+  border-radius: 50%;
+  z-index: 10000;
+  pointer-events: none;
+  animation: sparkleAnimation 1s ease-out forwards;
+  box-shadow: 0 0 10px #ffd700;
+}
+
+@keyframes sparkleAnimation {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+    opacity: 0;
+  }
+}
