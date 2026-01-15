@@ -1,142 +1,101 @@
-# Ved Pawar - Portfolio
+# Ved Pawar - Brutalist Portfolio
 
-A minimal, clean, and interactive portfolio website with hidden easter eggs.
+Ultra-minimal, brutalist portfolio with ONE big 3D rotating name animation as the main attraction.
 
-## 🚀 Features
+## 🎯 Design Philosophy
 
-### Main Sections
-- **Hero Section**: Animated introduction with typewriter effect and social links
-- **Projects**: Categorized project showcase with filtering (Flagship, Open Source, AI, Hackathons, Freelance)
-- **Experience**: Timeline view of professional experience
-- **Skills**: Organized skill categories with animated progress bars
-- **Contact**: Multiple ways to get in touch
+**No fancy CSS. Pure simplicity. One stunning centerpiece.**
 
-### Interactive Features
-- **Search Bar**: Fuzzy search across all content with autocomplete suggestions
-- **Secret Commands**: Type special commands in the search bar:
-  - `/secret` - Activate secret mode
-  - `/matrix` - Enter the Matrix (Matrix rain effect)
-  - `/hack` - Hacking effect
-  - `/credits` - Show credits
-  - `/stats` - Display portfolio stats
-  - `/konami` - Learn about the Konami code
-  - `/easter` - Show all easter egg commands
+- Black & white only
+- Monospace font (Courier New)
+- No gradients, no shadows, no blur effects
+- Raw, honest, direct
+- ONE big animation that grabs attention
 
-### Easter Eggs 🎮
-1. **Konami Code**: Press ↑↑↓↓←→←→BA to activate confetti and rainbow effects
-2. **Triple Click**: Click anywhere three times quickly for sparkles
-3. **Secret Hover**: Hold Shift + Alt while hovering to activate secret mode
-4. **Search Commands**: Use the secret commands listed above
+## ✨ The Main Attraction
 
-### Design Features
-- Clean, minimal aesthetic with subtle animations
-- Smooth scrolling and section navigation
-- Responsive design for all screen sizes
-- Custom scrollbar with gradient
-- Glass morphism effects
-- Accessibility support (prefers-reduced-motion)
+**Giant 3D Rotating Name Animation**
+- Full-screen black background
+- Your name rotating in 3D space
+- Continuous rotation with perspective depth
+- Floating animation on each word
+- Hypnotic and mesmerizing
 
-## 🛠️ Tech Stack
+## 📄 Content Sections
 
-- **React 19.2.0** - UI library
-- **Vite 7.2.4** - Build tool and dev server
-- **CSS3** - Styling with animations and transitions
-- **ESLint** - Code linting
+After the big animation, simple text sections:
 
-## 📦 Installation
+1. **About** - Name, title, bio, links
+2. **Search** - Simple search bar (inverts colors on focus)
+3. **Projects** - All 17+ projects in simple bordered boxes
+4. **Experience** - Timeline of work history
+5. **Skills** - Plain list of all technologies
+6. **Footer** - Copyright + Konami code hint
+
+## 🎮 Easter Egg
+
+**Konami Code**: Press `↑↑↓↓←→←→BA` to activate glitch mode
+
+## 🎨 Style Details
+
+- **Font**: Courier New (monospace)
+- **Colors**: Pure black (#000) and white (#fff)
+- **Borders**: Simple 1px or 2px solid black lines
+- **Hover effects**: Text inverts (black bg, white text)
+- **Search focus**: Inverts to black background
+- **No smooth scroll** - keeps it brutal and raw
+
+## 🚀 Running
 
 \`\`\`bash
-# Install dependencies
 npm install
-
-# Run development server
 npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
 \`\`\`
 
-## 🎨 Color Palette
+Visit: http://localhost:5174/
 
-- Primary: `#6366f1` (Indigo)
-- Secondary: `#a855f7` (Purple)
-- Text: `#0f172a` (Slate 900)
-- Gray: `#64748b` (Slate 500)
-- Background: `#ffffff` / `#f8fafc`
+## 📦 Stack
 
-## 📁 Project Structure
+- React 19.2.0
+- Vite 7.2.4
+- Pure CSS (no libraries)
+- Single file architecture (App.jsx + App.css)
+
+## 🗂️ Structure
 
 \`\`\`
 src/
-├── components/
-│   ├── Hero.jsx/css          # Landing section
-│   ├── SearchBar.jsx/css     # Search with easter eggs
-│   ├── Projects.jsx/css      # Project showcase
-│   ├── Experience.jsx/css    # Timeline view
-│   ├── Skills.jsx/css        # Skills visualization
-│   ├── Contact.jsx/css       # Contact information
-│   ├── Navigation.jsx/css    # Nav bar with scroll spy
-│   └── EasterEggs.jsx/css    # Hidden interactions
 ├── data/
-│   └── portfolio.js          # All content data
-├── App.jsx                   # Main app component
-├── App.css                   # Global styles
-├── main.jsx                  # Entry point
-└── index.css                 # Base styles
+│   └── portfolio.js    # All content
+├── App.jsx             # Single component
+├── App.css             # Brutalist styles
+└── main.jsx            # Entry
 \`\`\`
 
-## 🎯 Projects Included
+## 🌟 Projects Showcase
 
-### Flagship (4 projects)
-- DCODE Platform (~300 users)
-- NXTUP (~700 users)
-- Treeview (Developer tool)
-- Vanaha Products (~15-20 DAU)
+- **20+ projects** across categories
+- Flagship: DCODE (300 users), NXTUP (700 users)
+- Open Source: RippleX, Nebula, Treeview
+- AI: Syftly.ai, Ano, AI Interviewer
+- Hackathons & Freelance work
 
-### Open Source (4 projects)
-- RippleX (State management)
-- Nebula (Backend system)
-- Vedact (React implementation)
-- Vedpiler (Compiler)
+## 💻 Features
 
-### AI / Experimental (5 projects)
-- Syftly.ai
-- Ano
-- Text to Animated Video
-- AI Interviewer
-- Simple RAG System
-
-### Hackathons (3 projects)
-- Construct (Chrome Extension)
-- PromptBase
-- Capstone Review
-
-### Freelance (1 project)
-- VnV24
-
-## 🌟 Key Highlights
-
-- **300+ users** across DCODE platform
-- **700+ users** on NXTUP
-- **Vice President** of DevClub
-- **Open Source Contributor** to PSF, Newton School, and more
-- **Full-stack developer** with focus on backend and AI
+- **Search**: Real-time project filtering
+- **Responsive**: Works on all devices
+- **Fast**: No heavy assets, just text
+- **Accessible**: Semantic HTML
+- **Print-friendly**: Clean structure
 
 ## 📧 Contact
 
-- Email: ved.pawar2024@nst.rishihood.edu.in
-- LinkedIn: [vedpawar2254](https://www.linkedin.com/in/vedpawar2254)
-- GitHub: [vedpawar2254](https://github.com/vedpawar2254)
-- Kaggle: [vedpawar2254](https://www.kaggle.com/vedpawar2254)
-- LeetCode: [vedpawar2254](https://leetcode.com/vedpawar2254)
+ved.pawar2024@nst.rishihood.edu.in
 
-## 📄 License
-
-© 2026 Ved Pawar. All rights reserved.
+[GitHub](https://github.com/vedpawar2254) | [LinkedIn](https://www.linkedin.com/in/vedpawar2254)
 
 ---
 
-Built with ❤️ using React + Vite
+**© 2026 Ved Pawar**
+
+Built with React. No fluff. Just code.
