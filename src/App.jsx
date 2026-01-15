@@ -26,11 +26,12 @@ function App() {
   // Define sections with proper names
   const sections = [
     { id: 'all', label: 'all', title: 'All Projects' },
-    { id: 'flagship', label: 'open source - my own', title: 'Section 1: Open Source - My Own' },
-    { id: 'opensource', label: 'contributed', title: 'Section 1: Open Source - Contributed' },
-    { id: 'hackathon', label: 'hackathons', title: 'Section 2: Hackathons/Unpolished' },
-    { id: 'ai', label: 'for college', title: 'Section 3: For College' },
-    { id: 'freelance', label: 'freelance', title: 'Section 5: Freelance' }
+    { id: 'magnum_opus', label: 'magnum opus', title: 'Section 1: Magnum Opus' },
+    { id: 'opensource', label: 'maintained', title: 'Section 2: Open Source - Maintained' },
+    { id: 'hackathon', label: 'hackathons', title: 'Section 3: Hackathons/Unpolished' },
+    { id: 'ai', label: 'AI', title: 'Section 4: AI' },
+    { id: 'freelance', label: 'freelance', title: 'Section 5: Freelance' },
+    { id: 'misc', label: 'misc', title: 'Section 6: Misc' }
   ]
 
   // Highlighted projects

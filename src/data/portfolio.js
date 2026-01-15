@@ -1,9 +1,9 @@
 export const personalInfo = {
   name: "Ved Pawar",
-  title: "SDE | Backend & Product | Open Source",
+  title: "SDE | AI | Backend & Product | Open Source | Coolness",
   email: "ved.pawar2024@nst.rishihood.edu.in",
   phone: "8208689558",
-  bio: "Software engineer working at the intersection of backend systems, generative AI, and early-stage products. I design and ship end-to-end platforms—owning architecture, APIs, data flows, and deployment—with real users in production (hundreds across multiple systems).",
+  bio: "Software engineer working on pretty much everything. I design and ship end-to-end platforms—owning architecture, APIs, data flows, and deployment—with real users in production (hundreds across multiple systems).",
   tagline: "Building systems that scale, ship, and matter.",
   links: {
     github: "https://github.com/vedpawar2254",
@@ -77,7 +77,7 @@ export const experiences = [
 ];
 
 export const projects = {
-  flagship: [
+  magnum_opus: [
     {
       id: "dcode",
       name: "DCODE Platform",
@@ -89,32 +89,22 @@ export const projects = {
       status: "Production"
     },
     {
-      id: "nxtup",
-      name: "NXTUP",
-      description: "Startup and student ecosystem platform with ~700 users. Contributed to core platform development and deployment.",
-      url: "https://nxtup.in/",
-      github: "https://github.com/devclub-nstru/NXTUP",
-      tags: ["Platform", "Ecosystem", "Startup"],
-      users: "~700 users",
-      status: "Production"
+      id: "syftly",
+      name: "Syftly.ai",
+      description: "AI-powered application for intelligent workflows.",
+      url: "https://syftlyai.vercel.app/",
+      github: "https://github.com/vedpawar2254/syftly.ai",
+      tags: ["AI", "GenAI", "Product"],
+      status: "Beta"
     },
     {
-      id: "treeview",
-      name: "Treeview",
-      description: "Developer tool to generate project tree views for LLM and documentation workflows. Used by hundreds of developers with active contributors.",
-      github: "https://github.com/vedpawar2254/treeview",
-      tags: ["Developer Tool", "CLI", "NPM Library"],
-      users: "Hundreds of developers",
-      status: "Active"
-    },
-    {
-      id: "vanaha",
-      name: "Vanaha Products",
-      description: "Production systems for an agro-forestry startup; currently serving ~15–20 daily users.",
-      github: "https://github.com/vedpawar2254/vanaha-vibes",
-      tags: ["Product", "Production", "Agriculture"],
-      users: "~15-20 DAU",
-      status: "Production"
+      id: "ano",
+      name: "Ano",
+      description: "AI annotation tool for enhanced productivity.",
+      url: "https://anotate.vercel.app",
+      github: "https://github.com/vedpawar2254/Ano",
+      tags: ["AI", "Annotation", "Tool"],
+      status: "Beta"
     }
   ],
   opensource: [
@@ -234,7 +224,35 @@ export const projects = {
       image: "/vnv24_demo.png",
       tags: ["Website", "Event", "Frontend"],
       status: "Delivered"
+    },
+    {
+      id: "vanaha",
+      name: "Vanaha Products",
+      description: "Production systems for an agro-forestry startup; currently serving ~15–20 daily users.",
+      github: "https://github.com/vedpawar2254/vanaha-vibes",
+      tags: ["Product", "Production", "Agriculture"],
+      users: "~15-20 DAU",
+      status: "Production"
+    },
+    {
+      id: "Confidential",
+      name: "Confidential",
+      description: "Built Multiple Backend Systems from idea to architecture to production. And took ownership of all the products",
+      tags: ["Product", "Production", "Architecture", "FSD", "Backend"],
+      status: "Production"
     }
+  ],
+  misc: [
+    {
+      id: "DCODE platform v1",
+      name: "DCODE platform v1",
+      description: "Initial website for DCODE platform",
+      url: "https://dcode-frontend.vercel.app/",
+      github: "https://github.com/devclub-nstru/DCODE-frontend",
+      tags: ["Website", "Open Source", "Production", "Frontend", "Backend"],
+      status: "Production"
+    },
+    {}
   ]
 };
 
