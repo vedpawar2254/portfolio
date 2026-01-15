@@ -251,8 +251,7 @@ export const projects = {
       github: "https://github.com/devclub-nstru/DCODE-frontend",
       tags: ["Website", "Open Source", "Production", "Frontend", "Backend"],
       status: "Production"
-    },
-    {}
+    }
   ]
 };
 

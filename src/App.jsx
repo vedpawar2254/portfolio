@@ -67,12 +67,12 @@ function App() {
       <div className="animation-sidebar">
         <div className="rotating-cube">
           <div className="cube">
-            <div className="face front">DEV</div>
+            <div className="face front">GROW</div>
             <div className="face back">CODE</div>
-            <div className="face right">BUILD</div>
+            <div className="face right">LEARN</div>
             <div className="face left">SHIP</div>
-            <div className="face top">CREATE</div>
-            <div className="face bottom">LEARN</div>
+            <div className="face top">BREAK PROD</div>
+            <div className="face bottom">BUILD</div>
           </div>
         </div>
       </div>
