@@ -4,6 +4,7 @@ import { personalInfo, projects, experiences, skills } from './data/portfolio'
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('')
+  const [activeSection, setActiveSection] = useState('all')
   const [konamiProgress, setKonamiProgress] = useState([])
   const [secretMode, setSecretMode] = useState(false)
 
@@ -23,22 +24,41 @@ function App() {
   }, [konamiProgress])
 
   // Define sections with proper names
-  const sections = {
-    flagship: 'Section 1: Open Source - My Own',
-    opensource: 'Section 1: Open Source - Contributed',
-    hackathon: 'Section 2: Hackathons/Unpolished',
-    ai: 'Section 3: For College',
-    freelance: 'Section 5: Freelance'
+  const sections = [
+    { id: 'all', label: 'all', title: 'All Projects' },
+    { id: 'flagship', label: 'open source - my own', title: 'Section 1: Open Source - My Own' },
+    { id: 'opensource', label: 'contributed', title: 'Section 1: Open Source - Contributed' },
+    { id: 'hackathon', label: 'hackathons', title: 'Section 2: Hackathons/Unpolished' },
+    { id: 'ai', label: 'for college', title: 'Section 3: For College' },
+    { id: 'freelance', label: 'freelance', title: 'Section 5: Freelance' }
+  ]
+
+  // Highlighted projects
+  const highlightedProjects = ['dcode', 'syftly', 'ano']
+
+  // Filter projects by search and section
+  const getFilteredProjects = () => {
+    let filtered = {}
+
+    Object.entries(projects).forEach(([categoryId, projectList]) => {
+      if (activeSection !== 'all' && categoryId !== activeSection) return
+
+      const searchFiltered = searchQuery
+        ? projectList.filter(p =>
+          p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          p.description.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+        : projectList
+
+      if (searchFiltered.length > 0) {
+        filtered[categoryId] = searchFiltered
+      }
+    })
+
+    return filtered
   }
 
-  // Filter projects by search
-  const filterProjects = (projectList) => {
-    if (!searchQuery) return projectList
-    return projectList.filter(p =>
-      p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      p.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  }
+  const filteredProjects = getFilteredProjects()
 
   return (
     <div className="app">
@@ -84,29 +104,57 @@ function App() {
           <section className="projects">
             <h2>Projects</h2>
 
+            {/* Interactive Classification Tabs */}
+            <div className="classification-tabs">
+              {sections.map(section => (
+                <button
+                  key={section.id}
+                  className={`tab ${activeSection === section.id ? 'active' : ''}`}
+                  onClick={() => setActiveSection(section.id)}
+                >
+                  [{section.label}]
+                </button>
+              ))}
+            </div>
+
             {/* Display projects by section */}
-            {Object.entries(projects).map(([categoryId, projectList]) => {
-              const filtered = filterProjects(projectList)
-              if (filtered.length === 0) return null
+            {Object.keys(filteredProjects).length > 0 ? (
+              Object.entries(filteredProjects).map(([categoryId, projectList]) => {
+                const sectionInfo = sections.find(s => s.id === categoryId)
 
-              return (
-                <div key={categoryId} className="project-section">
-                  <h3 className="section-title">{sections[categoryId]}</h3>
+                return (
+                  <div key={categoryId} className="project-section">
+                    <h3 className="section-title">{sectionInfo.title}</h3>
 
-                  {filtered.map(project => (
-                    <div key={project.id} className="project">
-                      <h4>{project.name}</h4>
-                      <p>{project.description}</p>
-                      <div className="project-links">
-                        {project.url && <a href={project.url} target="_blank" rel="noopener noreferrer">visit</a>}
-                        {project.github && <a href={project.github} target="_blank" rel="noopener noreferrer">code</a>}
-                        {project.users && <span className="users">{project.users}</span>}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )
-            })}
+                    {projectList.map(project => {
+                      const isHighlighted = highlightedProjects.includes(project.id)
+
+                      return (
+                        <div
+                          key={project.id}
+                          className={`project ${isHighlighted ? 'highlighted' : ''}`}
+                        >
+                          <div className="project-header-row">
+                            <h4>{project.name}</h4>
+                            {isHighlighted && <span className="featured-badge">★ featured</span>}
+                          </div>
+                          <p>{project.description}</p>
+                          <div className="project-links">
+                            {project.url && <a href={project.url} target="_blank" rel="noopener noreferrer">visit</a>}
+                            {project.github && <a href={project.github} target="_blank" rel="noopener noreferrer">code</a>}
+                            {project.users && <span className="users">{project.users}</span>}
+                          </div>
+                        </div>
+                      )
+                    })}
+                  </div>
+                )
+              })
+            ) : (
+              <div className="no-results">
+                <p>no projects found</p>
+              </div>
+            )}
           </section>
 
           <section className="experience">
@@ -136,7 +184,7 @@ function App() {
 
           <footer>
             <p>ved pawar © 2026</p>
-            <p className="easter-hint">try: ↑↑↓↓←→←→BA</p>
+            {/* <p className="easter-hint">try: ↑↑↓↓←→←→BA</p> */}
           </footer>
         </div>
       </div>
